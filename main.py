@@ -29,7 +29,6 @@ def main():
     # Loop 1: Loop through all subdirectories of the passed directory. By this, determine the level depth (compared to
     # the root directory) and the total number of files for each directory and put this into a dictionary.
     for root, dirs, files in os.walk(in_dir):
-        print('Searching in: ', root)
         num_of_files_in_root = 0
 
         root_levels = root.count('\\') - in_dir_levels
@@ -45,10 +44,9 @@ def main():
                 num_of_files_in_root += 1
                 total_files += 1
 
-        print('---> {} files found here.'.format(num_of_files_in_root))
+        print('Found {} files in'.format(num_of_files_in_root), root)
         all_dir_information[root] = {'files': num_of_files_in_root,
                                      'levels': root_levels}
-        print('')
 
     # Print the results of the first loop
     print('----------------------------')
