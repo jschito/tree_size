@@ -128,7 +128,6 @@ if __name__ == '__main__':
     main()
 
     # Show the time needed to run the function
-    # if const.working_device == ('pc' or 'platform_server'):
     print('')
     print('Done.')
     print('The process took ' + str(round(time.time() - time0, 3)) + ' seconds.')
